@@ -3,6 +3,15 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include <random>
+
+int getRandomDigit()
+{
+	static std::random_device rd;
+	static std::uniform_int_distribution<int> dist(0, 9);
+
+	return dist(rd);
+}
 
 void launchGame()
 {
@@ -24,4 +33,7 @@ void launchGame()
 
 	int C = 0, U = 0, V = 0;
 	std::cout << "? ", std::getline(std::cin, A), std::cout << "\n\n";
+
+	int Z = getRandomDigit();
+	std::cout << Z << std::endl;
 }
