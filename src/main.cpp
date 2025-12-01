@@ -1,7 +1,7 @@
-#include <iostream>
+#include "drz.h"
 
 int main()
 {
-	std::cout << "Hello World!" << std::endl;
+	launchGame();
 	return 0;
 }
