@@ -34,6 +34,58 @@ void launchGame()
 	int C = 0, U = 0, V = 0;
 	std::cout << "? ", std::getline(std::cin, A), std::cout << "\n\n";
 
-	int Z = getRandomDigit();
-	std::cout << Z << std::endl;
+	do
+	{
+		int Z = getRandomDigit();
+
+		if (U == Z) { Z = getRandomDigit(); }
+		if (V == Z) { Z = getRandomDigit(); }
+
+		switch (Z + 1)
+		{
+		case 1:
+			std::cout << "THAT'S VERY INTERESTING, TELL ME MORE.\n\n";
+			std::cout << "? ", std::getline(std::cin, A), std::cout << "\n\n";
+			break;
+		case 2:
+			std::cout << "HAVE YOU FELT THIS WAY LONG?\n\n";
+			std::cout << "? ", std::getline(std::cin, A), std::cout << "\n\n";
+			break;
+		case 3:
+			std::cout << "DO YOU THINK THIS IS REASONABLE IN LIGHT OF YOUR INTERESTS?\n\n";
+			std::cout << "? ", std::getline(std::cin, A), std::cout << "\n\n";
+			break;
+		case 4:
+			std::cout << "DO YOUR FRIENDS FIND THIS ACCEPTABLE?\n\n";
+			std::cout << "? ", std::getline(std::cin, A), std::cout << "\n\n";
+			break;
+		case 5:
+			std::cout << "DO YOU FEEL COMFORTABLE WITH THIS FEELING?\n\n";
+			std::cout << "? ", std::getline(std::cin, A), std::cout << "\n\n";
+			break;
+		case 6:
+			std::cout << "DO YOU THINK THAT THIS IS A NORMAL FEELING?\n\n";
+			std::cout << "? ", std::getline(std::cin, A), std::cout << "\n\n";
+			break;
+		case 7:
+			std::cout << "WHY DO YOU THINK YOU FEEL THIS WAY?\n\n";
+			std::cout << "? ", std::getline(std::cin, A), std::cout << "\n\n";
+			break;
+		case 8:
+			std::cout << "HAVE YOU TALKED TO ANYONE ABOUT THIS?\n\n";
+			std::cout << "? ", std::getline(std::cin, A), std::cout << "\n\n";
+			break;
+		case 9:
+			std::cout << "WHY ARE YOU HERE?\n\n";
+			std::cout << "? ", std::getline(std::cin, A), std::cout << "\n\n";
+			break;
+		case 10:
+			std::cout << "ARE YOU SATISFIED WITH THE WAY YOUR IDEAS ARE DEVELOPING?\n\n";
+			std::cout << "? ", std::getline(std::cin, A), std::cout << "\n\n";
+			break;
+		}
+
+		U = Z;
+
+	} while (++C != 10);
 }
