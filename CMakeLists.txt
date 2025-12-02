@@ -28,7 +28,7 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 # List all your source files for the executable
 set(SOURCES
 	src/main.cpp
-	src/DrZGame.cpp
+	src/drz.cpp
 )
 
 # Ensure SOURCES contains all required .cpp files
