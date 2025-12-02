@@ -88,4 +88,20 @@ void launchGame()
 		U = Z;
 
 	} while (++C != 10);
+
+	std::cout << "I THINK YOU ARE MAKING A GREAT ATTEMPT TO SOLVE YOUR\n";
+	std::cout << "DIFFICULTIES, AND I SEE NO NEED TO CONTINUE THIS\n";
+	std::cout << "SESSION ANY FURTHER.\n";
+
+	std::cout << B
+			  << " WOULD YOU MAKE ANOTHER APPOINTMENT WITH MY COMPUTER\n"
+			  << "FOR SOMETIME IN THE NEXT FEW WEEKS. WHAT DATE WOULD YOU\n"
+			  << "PREFER?\n";
+
+	std::cout << "? ", std::getline(std::cin, A);
+
+	std::cout << "THAT WILL BE FINE .\n";
+	std::cout << "I'VE ENJOYED COMMUNICATING WITH YOU.\n";
+	std::cout << "HAVE A NICE DAY.";
+	std::cout << std::string(5, '\n');
 }
