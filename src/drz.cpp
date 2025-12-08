@@ -8,9 +8,10 @@
 int getRandomDigit()
 {
 	static std::random_device rd;
+	static std::mt19937 gen(rd());
 	static std::uniform_int_distribution<int> dist(0, 9);
 
-	return dist(rd);
+	return dist(gen);
 }
 
 void launchGame()
