@@ -38,7 +38,10 @@ void launchGame()
 		std::cout << "? ", std::getline(std::cin, A), std::cout << "\n\n";
 
 		int Z = 0;
-		do { Z = getRandomDigit(); } while (U == Z || V == Z);
+		do
+		{
+			Z = getRandomDigit();
+		} while (U == Z || V == Z);
 
 		U = Z;
 		switch (Z + 1)
