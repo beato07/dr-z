@@ -20,17 +20,19 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Set paths for output files
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
-# List all your source files for the executable
+# Source files for the executable
 set(SOURCES
 	src/main.cpp
 	src/drz.cpp
 )
 
-# Ensure SOURCES contains all required .cpp files
-add_executable(
-	dr-z 
-	${SOURCES}
+# Header files for the executable
+set(HEADERS
+    include/drz.h
 )
+
+# Create main executable target
+add_executable(dr-z ${SOURCES} ${HEADERS})
 
 # Set the project as the initial one
 set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT dr-z)
