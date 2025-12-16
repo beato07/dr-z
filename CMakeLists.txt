@@ -28,7 +28,7 @@ set(SOURCES
 
 # Header files for the executable
 set(HEADERS
-    include/drz.h
+	src/drz.h
 )
 
 # Create main executable target
