@@ -1,0 +1,123 @@
+1 Dim numbers(9) As Integer
+2 Dim i As Integer
+3 Dim filename As String * 50
+4 Dim arg As String * 100
+5 Dim useFileNumbers As Integer
+
+6 arg = Command$
+7 useFileNumbers = 0
+
+8 If Len(arg) = 0 Then
+    9 useFileNumbers = 0
+10 ElseIf InStr(arg, "--input=") = 1 Then
+    11 useFileNumbers = 1
+    12 filename = Mid$(arg, 9)
+13 ElseIf InStr(arg, "-i=") = 1 Then
+    14 useFileNumbers = 1
+    15 filename = Mid$(arg, 4)
+16 Else
+    17 useFileNumbers = 0
+18 End If
+
+19 If useFileNumbers = 1 Then
+    20 Open filename For Input As #1
+    21 If Err <> 0 Then
+        22 useFileNumbers = 0
+        23 GoTo 25
+    24 End If
+    25 For i = 0 To 9: Input #1, numbers(i): Next i
+    26 Close #1
+27 End If
+
+28 Print Tab(27); "DR.Z"
+29 Print Tab(20); "CREATIVE COMPUTING"
+30 Print Tab(18); "MORRISTOWN, NEW JERSEY"
+31 Print: Print: Print
+
+32 Print "HELLO THERE, I'M YOUR COMPUTER THERAPIST."
+33 Print "WHAT IS YOUR NAME? AND TELL ME SOMETHING ABOUT YOURSELF."
+34 Print "HOWEVER, DON'T TYPE MORE THAN ONE LINE. I TIRE EASILY."
+35 Input A$
+36 Print "WHAT DID YOU SAY YOUR NAME WAS AGAIN?"
+37 Input B$
+38 Print "HOW DO YOU FEEL TODAY?"
+
+39 Let C = 0: U = 0: V = 0: i = 0
+
+100 Input A$
+110 Print
+120 Print
+130 If C = 10 Then 720
+
+140 If useFileNumbers = 1 And i <= 9 Then
+    141 Let Z = numbers(i)
+    142 i = i + 1
+    143 If Z = 0 Then 420
+144 Else
+    145 Let Z = Int(10 * Rnd(1))
+    146 If U = Z Then 145
+    147 If V = Z Then 145
+148 End If
+
+150 Let U = Z
+160 On Z + 1 GOTO 690, 420, 450, 480, 510, 540, 570, 600, 630, 660
+
+380 GoTo 690
+390 Print "THAT'S VERY INTERESTING, TELL ME MORE."
+400 Print
+410 GoTo 690
+
+420 Print "HAVE YOU FELT THIS WAY LONG?"
+430 Print
+440 GoTo 690
+
+450 Print "DO YOU THINK THIS IS REASONABLE IN LIGHT OF YOUR INTERESTS?"
+460 Print
+470 GoTo 690
+
+480 Print "DO YOUR FRIENDS FIND THIS ACCEPTABLE?"
+490 Print
+500 GoTo 690
+
+510 Print "DO YOU FEEL COMFORTABLE WITH THIS FEELING?"
+520 Print
+530 GoTo 690
+
+540 Print "DO YOU THINK THAT THIS IS A NORMAL FEELING?"
+550 Print
+560 GoTo 690
+
+570 Print "WHY DO YOU THINK YOU FEEL THIS WAY?"
+580 Print
+590 GoTo 690
+
+600 Print "HAVE YOU TALKED TO ANYONE ABOUT THIS?"
+610 Print
+620 GoTo 690
+
+630 Print "WHY ARE YOU HERE?"
+640 Print
+650 GoTo 690
+
+660 Print "ARE YOU SATISFIED WITH THE WAY YOUR IDEAS ARE DEVELOPING?"
+670 Print
+680 GoTo 690
+
+690 Let C = C + 1
+700 Let U = Z
+710 GoTo 100
+
+720 Print "I THINK YOU ARE MAKING A GREAT ATTEMPT TO SOLVE YOUR"
+730 Print "DIFFICULTIES, AND I SEE NO NEED TO CONTINUE THIS"
+740 Print "SESSION ANY FURTHER."
+750 Print B$; " WOULD YOU MAKE ANOTHER APPOINTMENT WITH MY COMPUTER"
+760 Print "FOR SOMETIME IN THE NEXT FEW WEEKS. WHAT DATE WOULD YOU"
+770 Print "PREFER?"
+780 Input A$
+790 Print "THAT WILL BE FINE ."
+800 Print "I'VE ENJOYED COMMUNICATING WITH YOU."
+810 Print "HAVE A NICE DAY."
+820 For T = 1 To 6
+    830 Print
+840 Next T
+850 End
